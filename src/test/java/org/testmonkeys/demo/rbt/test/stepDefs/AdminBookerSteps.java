@@ -41,6 +41,7 @@ public class AdminBookerSteps {
         ContactMessage actual = contactActions.getMessageFromAdminBySubject(expectedMessage.getSubject());
 
         assertThat(actual, Entity.isEqualTo(expectedMessage));
+        context.takeScreenshot("Admin Side Message");
     }
 
 }

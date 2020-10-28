@@ -46,6 +46,7 @@ public class FrontendBookerSteps {
 
         context.put("message", message);
         contactActions.submitContactMessage(message);
+        context.takeScreenshot("SubmittedMessage");
     }
 
 
