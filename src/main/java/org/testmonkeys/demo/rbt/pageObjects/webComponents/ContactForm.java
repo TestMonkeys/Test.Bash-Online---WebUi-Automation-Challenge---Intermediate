@@ -11,7 +11,6 @@ public class ContactForm extends AbstractModule {
 
     @ElementAccessor(elementName = "Name", byId = "name")
     private Input fullName;
-
     @ElementAccessor(elementName = "Email", byId = "email")
     private Input email;
     @ElementAccessor(elementName = "Phone", byId = "phone")
@@ -20,6 +19,7 @@ public class ContactForm extends AbstractModule {
     private Input subject;
     @ElementAccessor(elementName = "Text", byId = "description")
     private Input text;
+
     @ElementAccessor(elementName = "Submit", byId = "submitContact")
     private Button submitBtn;
 
