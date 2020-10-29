@@ -1,5 +1,6 @@
 package org.testmonkeys.demo.rbt.test.configuration;
 
+import io.cucumber.spring.ScenarioScope;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,6 +20,7 @@ import java.util.concurrent.TimeUnit;
 @Import(CucumberSpringLoggingConfiguration.class)
 public class CucumberSpringConfiguration {
     @Bean
+    @ScenarioScope
     public Browser browser() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -27,6 +29,7 @@ public class CucumberSpringConfiguration {
     }
 
     @Bean
+    @ScenarioScope
     public PageFactory pageFactory(Browser browser) {
         String testedSite = "http://localhost:8080";
         String site = System.getProperty("site");
